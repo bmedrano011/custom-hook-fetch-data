@@ -51,6 +51,13 @@ export default function Index() {
         <p>Data Loading...</p>
       ) : (
         <>
+          <Typography
+            align="center"
+            variant="h1"
+            sx={{ fontSize: 26, fontWeight: 500 }}
+          >
+            Custom Hook to Fetch Data
+          </Typography>
           <Grid container direction="column" m={1} spacing={2}>
             <Grid item>
               <Typography variant="h1" sx={{ fontSize: 26, fontWeight: 500 }}>
