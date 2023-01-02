@@ -1,8 +1,8 @@
-# React & Material UI Table with Sticky Headers & Columns Demo
+# Developing a reusable React custom hook to fetch API data
 
 ## For a detailed explanation check out
 
-## https://bam-blog.vercel.app/blog/0003
+## https://bam-blog.vercel.app/blog/
 
 ### Feel free to use this as you wish
 
