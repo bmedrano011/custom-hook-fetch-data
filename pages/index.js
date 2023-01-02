@@ -37,7 +37,6 @@ export default function Index() {
     };
     createData("posts", post);
   };
-
   const handleUpdate = (post) => {
     if (post.id > 100) {
       handleMockedPost(post);
