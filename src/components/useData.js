@@ -48,10 +48,10 @@ export default function useData(url) {
       .finally(() => setIsLoading(false));
   };
 
-  const updateData = async (url, post) => {
+  const updateData = (url, post) => {
     if (!url) return;
     setIsLoading(true);
-    const response = await http
+    const response = http
       .put(url, post)
       .then((response) => {
         // Simulating an update
@@ -90,6 +90,19 @@ export default function useData(url) {
       .finally(() => setIsLoading(false));
   };
 
+  const handleMockedPost = (post) => {
+    // Simulating an update
+    let originalPostIndex = returnData.findIndex((obj) => obj.id == post.id);
+    returnData[
+      originalPostIndex
+    ].title = `${returnData[originalPostIndex].title} - Updated`;
+    returnData[
+      originalPostIndex
+    ].body = `${returnData[originalPostIndex].body} - Updated`;
+
+    setReturnData(returnData);
+  };
+
   return {
     isLoading,
     returnData,
@@ -98,5 +111,6 @@ export default function useData(url) {
     createData,
     updateData,
     deleteData,
+    handleMockedPost,
   };
 }

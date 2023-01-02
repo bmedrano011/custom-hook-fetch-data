@@ -25,6 +25,7 @@ export default function Index() {
     createData,
     updateData,
     deleteData,
+    handleMockedPost,
   } = useData("posts");
 
   const handleAdd = () => {
@@ -38,8 +39,13 @@ export default function Index() {
   };
 
   const handleUpdate = (post) => {
+    if (post.id > 100) {
+      handleMockedPost(post);
+      return;
+    }
     updateData(`posts/${post.id}`, post);
   };
+
   const handleRemove = (post) => {
     deleteData(`posts/${post.id}`, post.id);
   };
