@@ -2,7 +2,7 @@
 
 ## For a detailed explanation check out
 
-## https://bam-blog.vercel.app/blog/
+## https://bam-blog.vercel.app/blog/Fetching_Data_In_React_With_Hooks
 
 ### Feel free to use this as you wish
 
